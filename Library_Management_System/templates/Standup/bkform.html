@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .container{
+        font-size: 20px;
+        font: italic small-caps bold 25px/30px Georgia;
+        color: aqua;
+      }
+      body{
+            background-image: url("/static/images/wall.webp");
+            background-color:#ff000080;;
+            height: 800px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
+          form{
+            padding-top: 50px;
+          }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container  " >
+      <div class="col-md-6 container">
+
+    <form class="" action="" method="POST">
+      <div>
+      <td> <a href="/allbook"> <span class="bi bi-toggle2-on btn btn-primary "> Available Book</span></a></td>
+    </div>
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="Bname" class="form-label">Bname</label>
+        <input type="text" class="form-control" id="Bname" name="Bname" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="Bauthor" class="form-label">Bauthor</label>
+        <input type="text" class="form-control" id="Bauthor" name="Bauthor" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="YearofPub" class="form-label">YearofPub</label>
+        <input type="date" class="form-control" id="YearofPub" name="YearofPub" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input type="float" class="form-control" id="Price" name="Price" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="Page" class="form-label">Page</label>
+        <input type="int" class="form-control" id="Page" name="Page" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="status">Types of Book:</label>
+
+        <select name="Category" id="status">
+          <option >Non-Fiction</option>
+          <option  >Edited</option>
+          <option >Reference</option>
+          <option >Fiction</option>
+        </select>
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>
